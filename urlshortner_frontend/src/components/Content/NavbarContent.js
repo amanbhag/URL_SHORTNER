@@ -9,7 +9,8 @@ export default function NavbarContent() {
   function SubmitLink(e) {
     e.preventDefault();
     // const SendAPI = .Rprocess.envEACT_APP_SERVER_URL+"api/convertShort"
-    const SendAPI = "http://localhost:4000/" + "api/convertShort";
+    const SendAPI =
+      "https://urlshortner-lm38.onrender.com/" + "api/convertShort";
 
     const form = document.getElementById("urlform");
     const config = {

@@ -6,7 +6,7 @@ export default function OpenUrl() {
   const [message, setmessage] = useState(null);
   const { url } = useParams();
   // const surl= process.env.REACT_APP_SERVER_URL+`api/${url}`;
-  const surl = "http://localhost:4000/" + `api/${url}`;
+  const surl = "https://urlshortner-lm38.onrender.com/" + `api/${url}`;
   try {
     useEffect(() => {
       (async () => {

@@ -4,6 +4,7 @@ export default function GenerateURL(props) {
   const [textcopy, settestcopy] = useState(false);
   function copyText() {
     var divElement = document.getElementById("myUrl");
+    console.log("divElement: ", divElement);
     var range = document.createRange();
     range.selectNode(divElement);
     window.getSelection().removeAllRanges();
@@ -34,9 +35,11 @@ export default function GenerateURL(props) {
             }}
           >
             <span>
-              <b>Link:</b>{" "}
+              <b>Link:</b>
               <p style={{ wordWrap: "break-word" }} id="myUrl">
-                http://localhost:3000/{props.slink}
+                <a href={props.slink} target="_blank" rel="noreferrer">
+                  {props.slink}
+                </a>
               </p>
             </span>
             <div

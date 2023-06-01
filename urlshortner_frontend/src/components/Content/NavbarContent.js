@@ -23,7 +23,10 @@ export default function NavbarContent() {
         if (response.data.status) {
           setshowBar(true);
           // fetching shorturl from backend and storing it.
-          setshorturllink(response.data.shorturl);
+          // setshorturllink(response.data.shorturl);
+          setshorturllink(
+            `https://url-shortner-umesh.vercel.app/${response.data.shorturl}`
+          );
         } else {
           alert(response.data.message);
           setshowBar(false);
